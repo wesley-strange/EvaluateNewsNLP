@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Sentiment Analysis Project</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Sentiment Analysis Project
+            </div>
+            <div class="">
+                By: Wesley Strange
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <label for="url">Enter document URL:</label>
+                    <input id="url-input" type="text" name="input" value="" placeholder="https://www.google.com">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div id="results">
+                    <div id = "url"></div>
+                    <div id = "polarity"></div>
+                    <div id = "subjectivity"></div>
+                    <div id = "errors"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Thanks for visiting my website!</p>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
